@@ -1,14 +1,14 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { Button } from '@mui/material';
-import { attPassingComp, attPassingInomp, defPassingComp, defPassingIncomp } from '../components/passing';
+import { useAttPassIncomplete, useDefPassComplete, useDefPassIncomplete, useattPassComplete } from '../components/passing';
 
 
 export default function Home() {
-  const {attPassCompButtonCount, attPassComp} = attPassingComp()
-  const {attPassIncompButtonCount, attPassIncomp} = attPassingInomp()
-  const {defPassCompButtonCount, defPassComp} = defPassingComp()
-  const {defPassIncompButtonCount, defPassIncomp} = defPassingIncomp()
+  const {attPassCompButtonCount, attPassComp} = useattPassComplete()
+  const {attPassIncompButtonCount, attPassIncomp} = useAttPassIncomplete()
+  const {defPassCompButtonCount, defPassComp} = useDefPassComplete()
+  const {defPassIncompButtonCount, defPassIncomp} = useDefPassIncomplete()
 
 
 
@@ -20,11 +20,12 @@ export default function Home() {
       </Head>
       <body>
         <h1 className={styles.title}>Button Counter</h1>
-        <Button color='success' variant='contained' onClick={attPassComp}>Att Pass Complete {attPassCompButtonCount}</Button>
-        <Button color='error' variant='contained' onClick={attPassIncomp}>Att Pass Incomplete {attPassIncompButtonCount}</Button>
-        <Button color='success' variant='contained' onClick={defPassComp}>Def Pass Complete {defPassCompButtonCount}</Button>
-        <Button color='error' variant='contained' onClick={defPassIncomp}>Def Pass Incomplete {defPassIncompButtonCount}</Button>
+        <Button color='success' variant='outlined' onClick={attPassComp}>Att Pass Complete {attPassCompButtonCount}</Button>
+        <Button color='error' variant='outlined' onClick={attPassIncomp}>Att Pass Incomplete {attPassIncompButtonCount}</Button>
+        <Button color='success' variant='outlined' onClick={defPassComp}>Def Pass Complete {defPassCompButtonCount}</Button>
+        <Button color='error' variant='outlined' onClick={defPassIncomp}>Def Pass Incomplete {defPassIncompButtonCount}</Button>
       </body>
     </div>
   )
 }
+
