@@ -1,14 +1,16 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { Button } from '@mui/material';
-import { attPassingComp, attPassingInomp, defPassingComp, defPassingInomp } from '../components/passing';
+import { attPassingComp, attPassingInomp, defPassingComp, defPassingIncomp } from '../components/passing';
 
 
 export default function Home() {
   const {attPassCompButtonCount, attPassComp} = attPassingComp()
   const {attPassIncompButtonCount, attPassIncomp} = attPassingInomp()
   const {defPassCompButtonCount, defPassComp} = defPassingComp()
-  const {defPassIncompButtonCount, defPassIncomp} = defPassingInomp()
+  const {defPassIncompButtonCount, defPassIncomp} = defPassingIncomp()
+
+
 
   return (
     <div className={styles.container}>

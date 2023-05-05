@@ -32,7 +32,7 @@ export function defPassingComp() {
     }
 }
 
-export function defPassingInomp() {
+export function defPassingIncomp() {
     const [defPassIncompButtonCount, setbuttoncount4] = useState(0)
 
     const defPassIncomp = () => setbuttoncount4(value => value + 1)
