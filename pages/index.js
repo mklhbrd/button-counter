@@ -33,24 +33,24 @@ export default function Home() {
 
         <p>Att - Pass</p>
         <Stack direction={'row'}spacing={2} >
-        <Button color='success' variant='outlined' onClick={attPassComp}>Att Complete {attPassCompButtonCount}</Button>
-        <Button color='error' variant='outlined' onClick={attPassIncomp}>Att Incomplete {attPassIncompButtonCount}</Button>
+        <Button sx={{p:2, m:0}} color='success' variant='outlined' onClick={attPassComp}>Att Complete {attPassCompButtonCount}</Button>
+        <Button sx={{p:2, m:0}} color='error' variant='outlined' onClick={attPassIncomp}>Att Incomplete {attPassIncompButtonCount}</Button>
         </Stack>
         <p>Def - Pass</p>
-        <Stack direction={'row'}spacing={2} >
-        <Button color='success' variant='outlined' onClick={defPassComp}>Def Complete {defPassCompButtonCount}</Button>
-        <Button color='error' variant='outlined' onClick={defPassIncomp}>Def Incomplete {defPassIncompButtonCount}</Button>
+        <Stack direction={'row'} spacing={2} >
+        <Button sx={{p:2, m:0}} color='success' variant='outlined' onClick={defPassComp}>Def Complete {defPassCompButtonCount}</Button>
+        <Button sx={{p:2, m:0}} color='error' variant='outlined' onClick={defPassIncomp}>Def Incomplete {defPassIncompButtonCount}</Button>
         </Stack>
         <p>Shots</p>
         <Stack direction={'row'} spacing={2}>
-        <Button color='success' variant='outlined' onClick={buttonClicked5}>Shot On {ButtonCount5}</Button>
-        <Button color='error' variant='outlined' onClick={buttonClicked6}>Shot Off {ButtonCount6}</Button>
+        <Button sx={{p:2, m:0, width:160}} color='success' variant='outlined' onClick={buttonClicked5}>Shot On {ButtonCount5}</Button>
+        <Button sx={{p:2, m:0, width:173}} color='error' variant='outlined' onClick={buttonClicked6}>Shot Off {ButtonCount6}</Button>
         </Stack>
         <p> Big Chance - Cross - Tackle</p>
-        <Stack direction={'row'} spacing={2}>
-          <Button variant='outlined' onClick={buttonClicked7}> Big Chance {ButtonCount7}</Button>
-          <Button variant='outlined' onClick={buttonClicked8}> Cross {ButtonCount8}</Button>
-          <Button variant='outlined' onClick={buttonClicked9}> Tackle {ButtonCount9}</Button>
+        <Stack direction={'row'} spacing={3}>
+          <Button sx={{p:2, m:0}} variant='outlined' onClick={buttonClicked7}> Big Chance {ButtonCount7}</Button>
+          <Button sx={{p:2, m:0}} variant='outlined' onClick={buttonClicked8}> Cross {ButtonCount8}</Button>
+          <Button sx={{p:2, m:0}} variant='outlined' onClick={buttonClicked9}> Tackle {ButtonCount9}</Button>
         </Stack>
 
       
