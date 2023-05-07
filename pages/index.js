@@ -3,6 +3,9 @@ import styles from '../styles/Home.module.css';
 import { Button, Grid, Stack } from '@mui/material';
 import { useAttPassIncomplete, useDefPassComplete, useDefPassIncomplete, useattPassComplete } from '../components/pass';
 import { useShotOffTarget, useShotOnTarget } from '../components/shots';
+import { useBigChance } from '../components/big chance';
+import { useCross } from '../components/cross';
+import { useTackle } from '../components/tackle';
 
 
 export default function Home() {
@@ -12,6 +15,9 @@ export default function Home() {
   const {defPassIncompButtonCount, defPassIncomp} = useDefPassIncomplete()
   const {ButtonCount5, buttonClicked5} = useShotOnTarget()
   const {ButtonCount6, buttonClicked6} = useShotOffTarget()
+  const {ButtonCount7, buttonClicked7} = useBigChance()
+  const {ButtonCount8, buttonClicked8} = useCross()
+  const {ButtonCount9, buttonClicked9} = useTackle()
 
 
 
@@ -40,7 +46,12 @@ export default function Home() {
         <Button color='success' variant='outlined' onClick={buttonClicked5}>Shot On {ButtonCount5}</Button>
         <Button color='error' variant='outlined' onClick={buttonClicked6}>Shot Off {ButtonCount6}</Button>
         </Stack>
-      
+        <p> Big Chance - Cross - Tackle</p>
+        <Stack direction={'row'} spacing={2}>
+          <Button variant='outlined' onClick={buttonClicked7}> Big Chance {ButtonCount7}</Button>
+          <Button variant='outlined' onClick={buttonClicked8}> Cross {ButtonCount8}</Button>
+          <Button variant='outlined' onClick={buttonClicked9}> Tackle {ButtonCount9}</Button>
+        </Stack>
 
       
       </div>
