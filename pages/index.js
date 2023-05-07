@@ -21,7 +21,7 @@ export default function Home() {
         <title>Button Counter</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body>
+      <div>
         <h1 className={styles.title}>socca stats </h1>
 
 
@@ -43,7 +43,7 @@ export default function Home() {
       
 
       
-      </body>
+      </div>
     </div>
   )
 }
